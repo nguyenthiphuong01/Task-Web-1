@@ -1,5 +1,20 @@
 function validate()
 {
+//Cach 2
+    var username=document.getElementById("username");
+    var password=document.getElementById("password");
+    var user = /^.{5,15}$/;
+    var pass = /^(?=[A-Z])(?=.+[a-z])(?=.+[0-9]).{8,20}$/;
+    if(username.value.match(user)&&password.value.match(pass))
+    {
+        alert("Submit successfully!")
+        return true;
+    } else{
+        alert("Submit failed!")
+        return false;
+    }
+//Cach 1
+    /*
     var username=document.getElementById("username");
     var password=document.getElementById("password");
     var numbers = /[0-9]/g;
@@ -15,4 +30,6 @@ function validate()
     } else {
       alert("Submit failed!");
     }
+    */
+
 }
